@@ -74,11 +74,10 @@ If you are here, this is your first time installing Katsuna OS! After [setting u
 #### 2.1. Decrypt Data partition
 Power off your device. Turn it on again by pressing **(power + volume down)** and type this command in the CMD window:
 
-  **Please note: this will erase all user data from the device!**
-  ```
-  fastboot format userdata
-  ```
-
+  **Please note: this will erase all user data from the device!**       
+```
+fastboot format userdata
+```
 <a name="recovery"></a>
 #### 2.2. Install a custom recovery partition (TWRP)
 The recovery partition in your device is used to apply software updates to the device, e.g. OTA updates, and to erase user data and cache, e.g. for troubleshooting or preparing the device for resale (factory reset). For installing Katsuna OS, you are going to need to install a popular alternative, TWRP Recovery.
@@ -126,36 +125,33 @@ Every time you want to install Katsuna OS:
 * Make sure you have [already updated to the correct stock nexus image](#stock).
 * [Install](#flash).
 
-
 <a name="flash"></a>
 ### 4.1. Install the Katsuna OS ROM file
 
 1. Download the ROM from [here](http://updater.katsuna.com/files/angler/latest).
 2. **Remember, don't boot into Android yet!**
 3. Power off your device. Turn it on again by pressing **(power + volume down)**. Use the volume buttons to select "recovery mode". Use the power button to confirm the selection.
-* Perform a full wipe
-  ```
-  * Select the wipe option from the TWRP home screen.
-  * Select advanced wipe.
-  * Check the system, data, cache, and dalvik cache options.
-  * Swipe to wipe.
-  ```
-2. Copy the downloaded file inside:
-    ```
-    C:\SDK\platform-tools\
-    ```
-5. Push the ROM file to the device by typing this command in the CMD window (replace FILENAME with the name of the downloaded file):
-    ```
-    adb push FILENAME.zip /sdcard/
-    ```
-6. Install the ROM file
-    ```
-    * Select the install option from the TWRP home screen.
-    * Select the ROM zip
-    * Select "Add more zips".
-    * Select the GApps zip
-    * Swipe to install
-    ```
+4. Perform a full wipe      
+```
+* Select the wipe option from the TWRP home screen.
+* Select advanced wipe.
+* Check the system, data, cache, and dalvik cache options.
+* Swipe to wipe.
+```       
+5. Copy the downloaded file inside:     
+```
+C:\SDK\platform-tools\
+```     
+6. Push the ROM file to the device by typing this command in the CMD window (replace FILENAME with the name of the downloaded file):        
+```
+adb push FILENAME.zip /sdcard/
+```     
+7. Install the ROM file     
+```
+* Select the install option from the TWRP home screen.
+* Select the ROM zip
+* Swipe to install
+```     
 7. (Optional): [Install Google Apps](#gapps)    
 8. Select "Reboot System" and wait for Katsuna OS to load for the first time.
 
@@ -167,24 +163,25 @@ You can use the Google Play Store and Google Apps with your Katsuna OS installat
 
 1. Download [Nano Open-GApps package](http://opengapps.org/) **for Android 8.1 & arm64**    
 2. Copy the downloaded file inside:
-    ```
-    C:\SDK\platform-tools\
-    ```
+```
+C:\SDK\platform-tools\
+```
 3. Push the file to the device by typing this command in the CMD window (replace FILENAME with the name of the downloaded file):
-    ```
-    adb push FILENAME.zip /sdcard/
-    ```
+```
+adb push FILENAME.zip /sdcard/
+```
 4. Install the Google Apps file
-    ```
-    * Select the install option from the TWRP home screen.
-    * Select the GApps zip
-    * Swipe to install
-    ```
+```
+* Select the install option from the TWRP home screen.
+* Select the GApps zip
+* Swipe to install
+```
 
 <a name="update"></a>
 ## 5. Update Katsuna OS
 
 Katsuna OS can be updated:
+
 * Manually, by using the [installing procedure](#install).        
 If you choose this method, there are no extra steps.
 
