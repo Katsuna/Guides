@@ -9,7 +9,7 @@
 ### Contents
 1. [Set up the environment](#env)
 2. [Before installing Katsuna OS for the first time](#first)    
-    2.1. [Decrypt Data partition](#decrypt)    
+    2.1. [Format Data partition](#format)    
     2.2. [Install a custom recovery partition (TWRP)](#recovery)
 3. [Update to the correct stock Nexus image](#stock)
 4. [Install Katsuna OS](#install)       
@@ -66,12 +66,12 @@ It will ask you for confirmation using the volume buttons and the power menu at 
 
 If you are here, this is your first time installing Katsuna OS! After [setting up the working environment as described in the previous step](#env), you will also need to do the following **BEFORE** installing Katsuna OS:
 
-2.1. Decrypt data partition     
+2.1. Format Data partition     
 2.2. Install a custom recovery partition (TWRP)     
 2.3. **DO NOT** reboot to Android OS after any step     
 
-<a name="decrypt"></a>
-#### 2.1. Decrypt Data partition
+<a name="format"></a>
+#### 2.1. Format Data partition
 Power off your device. Turn it on again by pressing **(power + volume down)** and type this command in the CMD window:
 
   **Please note: this will erase all user data from the device!**       
@@ -82,14 +82,14 @@ fastboot format userdata
 #### 2.2. Install a custom recovery partition (TWRP)
 The recovery partition in your device is used to apply software updates to the device, e.g. OTA updates, and to erase user data and cache, e.g. for troubleshooting or preparing the device for resale (factory reset). For installing Katsuna OS, you are going to need to install a popular alternative, TWRP Recovery.
 
-1. Download [TWRP Recovery 3.2.1.0](https://dl.twrp.me/angler/)
+1. Download [TWRP Recovery 3.3.0-0](https://dl.twrp.me/angler/)
 2. Copy the downloaded file inside:
 ```
 C:\SDK\platform-tools\
 ```
-3. Power off your device. Turn it on again by pressing **(power + volume down)** and type this command in the CMD window (replace <filename> with the actual name of the file):
+3. Power off your device. Turn it on again by pressing **(power + volume down)** and type this command in the CMD window:
 ```
-fastboot flash recovery twrp-3.2.1-0-angler.img
+fastboot flash recovery twrp-3.3.0-0-angler.img
 ```
 
 **BE CAREFUL!** From now on, don't reboot into the stock Android at any part of the process, or the custom TWRP will be overwritten by the stock recovery and you will have to start over!

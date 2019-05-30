@@ -9,7 +9,7 @@
 ### Contents
 1. [Set up the environment](#env)
 2. [Before installing Katsuna OS for the first time](#first)    
-    2.1. [Format Data partition](#decrypt)    
+    2.1. [Format Data partition](#format)
 3. [Update to the correct stock Pixel image](#stock)
 4. [Install a custom recovery partition (TWRP)](#recovery)      
     4.1. [Boot into TWRP Recovery](#recovery-boot)      
@@ -71,7 +71,7 @@ If you are here, this is your first time installing Katsuna OS! After [setting u
 2.2. Install a custom recovery partition (TWRP)     
 2.3. **DO NOT** reboot to Android OS after any step     
 
-<a name="decrypt"></a>
+<a name="format"></a>
 #### 2.1. Format Data partition
 Power off your device. Turn it on again by pressing **(power + volume down)** and type this command in the CMD window:
 
