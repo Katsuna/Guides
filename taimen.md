@@ -18,8 +18,9 @@
     5.1. [Install the Katsuna OS ROM](#flash)   
     5.2. [Install Google Apps](#gapps)
 6. [Update Katsuna OS](#update)     
-    6.1. [Update to a normal Katsuna OS update](#normal-update)       
-    6.2 [Update to a Katsuna Security Update](#security-update)
+    6.1. [Update to a Katsuna OS update (feature revision: x.x.X - > x.x.Y)](#feature-update)     
+    6.2. [Upgrade to a new Android / Katsuna OS version (major revision: X.x.x - > Y.x.x)](#major-update)   
+    6.3. [Update to a new Katsuna Security Update (minor revision: x.X.x -> x.Y.x)](#minor-update)
 
 
 <a name="env"></a>
@@ -96,8 +97,8 @@ C:\SDK\platform-tools\
 ```
 ##### 3.5. Power off your device. Turn it on again by pressing **(power + volume down)** and type these commands in the CMD window:
 ```
-fastboot flash bootloader bootloader-bullhead-bhz11e.img   
-fastboot flash radio radio-bullhead-m8994f-2.6.33.2.14.img   
+fastboot flash bootloader bootloader-taimen-tmz12g.img
+fastboot flash radio radio-taimen-g8998-00202-1802061358.img
 fastboot flash vendor vendor.img
 ```
 
@@ -210,9 +211,15 @@ If you choose this method, there are no extra steps.
 * Through the Updater App inside Katsuna OS.        
 If you update the ROM through the Updater app:
 
-<a name="normal-update"></a>
-##### 6.1. Update to a new normal Katsuna OS update
+<a name="feature-update"></a>
+##### 6.1. Update to a Katsuna OS update (feature revision: x.x.X - > x.x.Y)
 The Updater app will let you know automatically if a new update has been found, and you will be able to download the update and apply it with a few taps with no PC involved, utilising the double partition system of the Pixel. After the installation is finished, you'll be able to boot into the new system with a simple restart.
+
+#### There may be extra steps to be executed in the following cases:
+
+<a name="major-update"></a>
+##### 6.2. Upgrade to a new Android / Katsuna OS version (major revision: X.x.x - > Y.x.x)
+Katsuna OS doesn't support this for the Pixel 2 XL at this point. It will be updated in the future.
 
 <a name="security-update"></a>
 ##### 6.2. Update to a new Katsuna Security Update

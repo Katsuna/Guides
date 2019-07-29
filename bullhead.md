@@ -16,9 +16,9 @@
     4.1. [Install the Katsuna OS ROM](#flash)   
     4.2. [Install Google Apps](#gapps)
 5. [Update Katsuna OS](#update)     
-    5.1. [Update to a normal Katsuna OS update](#normal-update)     
-    5.2 [Upgrade from Katsuna OS 1.x to 2.x](#upgrade)     
-    5.3 [Update to a Katsuna Security Update](#security-update)
+5.1. [Update to a Katsuna OS update (feature revision: x.x.X - > x.x.Y)](#feature-update)     
+5.2. [Upgrade to a new Android / Katsuna OS version (major revision: X.x.x - > Y.x.x)](#major-update)     
+5.3. [Update to a new Katsuna Security Update (minor revision: x.X.x -> x.Y.x)](#minor-update)
 
 
 <a name="env"></a>
@@ -97,21 +97,21 @@ fastboot flash recovery twrp-3.3.0-0-bullhead.img
 <a name="stock"></a>
 ## 3. Update to the correct stock Nexus image
 
-Katsuna OS is based on the official version of Android 8.1 (July security update: OPM6.171019.030.E1). To ensure the best compatibility with Katsuna OS for your device, you will need to install the bootloader, radio, and the vendor partition of this version.
+Katsuna OS is based on the official version of Android 8.1 (December security update: OPM7.181205.001). To ensure the best compatibility with Katsuna OS for your device, you will need to install the bootloader, radio, and the vendor partition of this version.
 
-##### 3.1. Download the [OPM6.171019.030.E1 stock nexus image for 5X](https://dl.google.com/dl/android/aosp/bullhead-opm6.171019.030.e1-factory-0650f4c3.zip)
+##### 3.1. Download the [OPM7.181205.001 stock nexus image for 5X](https://dl.google.com/dl/android/aosp/bullhead-opm7.181205.001-factory-5f189d84.zip)
 after reading and agreeing with Google's [Terms & Conditions](https://developers.google.com/android/images#legal)
 ##### 3.2. Extract the zip file
-Find the **bootloader-bullhead-bhz31b.img**, **radio-bullhead-m8994f-2.6.41.5.01.img** and **image-bullhead-opm6.171019.030.e1.zip** files.     
-Extract the **image-bullhead-opm6.171019.030.e1.zip** and find the **vendor.img** file.
+Find the **bootloader-bullhead-bhz32c.img**, **radio-bullhead-m8994f-2.6.42.5.03.img** and **image-bullhead-opm7.181205.001.zip** files.     
+Extract the **image-bullhead-opm7.181205.001.zip** and find the **vendor.img** file.
 ##### 3.4. Copy all the above mentioned files inside:
 ```
 C:\SDK\platform-tools\
 ```
 ##### 3.5. Power off your device. Turn it on again by pressing **(power + volume down)** and type these commands in the CMD window:
 ```
-fastboot flash bootloader bootloader-bullhead-bhz11e.img   
-fastboot flash radio radio-bullhead-m8994f-2.6.33.2.14.img   
+fastboot flash bootloader bootloader-bullhead-bhz32c.img  
+fastboot flash radio radio-bullhead-m8994f-2.6.42.5.03.img
 fastboot flash vendor vendor.img
 ```
 
@@ -189,15 +189,15 @@ If you choose this method, there are no extra steps.
 * Through the Updater App inside Katsuna OS.        
 If you update the ROM through the Updater app:
 
-<a name="normal-update"></a>
-##### 5.1. Update to a new normal Katsuna OS update
+<a name="feature-update"></a>
+##### 5.1. Update to a Katsuna OS update (feature revision: x.x.X - > x.x.Y)
 The Updater app will let you know automatically if a new update has been found, and you will be able to download the update and apply it with a few taps with no PC involved.
 
 #### There may be extra steps to be executed in the following cases:
 
-<a name="upgrade"></a>
-##### 5.2. Upgrade from Katsuna OS 1.x to 2.x
-The Updater app can't handle a major Katsuna OS update seamlessly. In order to install the 2.0 update through it, you will need to:
+<a name="major-update"></a>
+##### 5.2. Upgrade to a new Android / Katsuna OS version (major revision: X.x.x - > Y.x.x)
+The Updater app can't handle a major Katsuna OS update seamlessly. In order to install the update through it, you will need to:
 
 * Download the ROM file using the Updater app but **DO NOT TRIGGER THE UPDATE**.
 * [Make sure you have the latest TWRP recovery partition installed](#recovery)
@@ -207,6 +207,6 @@ The Updater app can't handle a major Katsuna OS update seamlessly. In order to i
 /sdcard/updates/
 ```
 
-<a name="security-update"></a>
-##### 5.3. Update to a new Katsuna Security Update
+<a name="minor-update"></a>
+##### 5.3. Update to a new Katsuna Security Update (minor revision: x.X.x -> x.Y.x)
 After a new Katsuna [Security update](https://source.android.com/security/bulletin/), you will need to [download the relevant stock nexus image and install ONLY the vendor.img file again](#stock).
